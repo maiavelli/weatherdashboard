@@ -11,12 +11,13 @@ var humidityEl = document.getElementById('humidity');
 var uvEl = document.getElementById('uv-index');
 
 
-//fetch current weather info
+//fetch current and 5 day weather info on submit
 submitBtn.addEventListener("click", getCurrentWeather);
+submitBtn.addEventListener("click", getFiveDay);
 
 function getCurrentWeather() {
 
-var currentWeatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + inputValue.value + "&appid=a1ea2d115b65763a8f4c1ffbff212f2d";
+var currentWeatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + inputValue.value + "&appid=a1ea2d115b65763a8f4c1ffbff212f2d&units=imperial";
 
     fetch(currentWeatherURL)
     .then(function(response) {
@@ -24,5 +25,24 @@ var currentWeatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + i
     })
     .then(function(data){
         console.log(data)
-        })
+        //capture specific data metrics
+        var nameValue = data['name'];
+        var tempValue = data['main']['temp'];
+        var windValue = data['wind']['speed'];
+        var humidityValue = data['main']['humidity'];
+        console.log(nameValue);
+        console.log(tempValue);
+        console.log(windValue);
+        console.log(humidityValue);
+
+        //display in HTML
+        nameEl.innerHTML = nameValue;
+        tempEl.textContent = "temperature: " + tempValue + " degrees";
+        windEl.textContent = "wind: " + windValue + " mph";
+        humidityEl.textContent = "humidity: " + humidityValue + " percent";
+        }) 
 };
+
+function getFiveDay() {
+
+}
