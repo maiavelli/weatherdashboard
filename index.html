@@ -3,14 +3,48 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CTA Train Tracker</title>
+    <title>Weather Dashboard</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
 
 <body>
     <section class = "hero is-primary">
         <div class = "hero-body has-text-centered">
-            <h1 class = "title">Weather Dashboard</h1>
+            <h1 class = "title is-1">Weather Dashboard</h1>
+        </div>
+    </section>
+
+    <!--location input form-->
+    <section class = "columns">
+        <div class = "column is-3">
+            <div class = "box field">
+                <label class = "label title is-3">Search for a City:</label>
+                <div class = "control">
+                <input class = "input mt-2" type = "text" placeholder = "San Diego">
+                <button class = "button is-primary is-rounded mt-2" type = "submit" value = "submit input">Submit</button>
+                </div>
+            </div>
+        </div>
+
+        <!--current weather-->
+        <div class = "column is-9" id = "current-weather">
+            <div class = "box has-text-centered">
+                <h1 class = "title is-3" id="city-name">City Name Here</h1>
+                <p class = "subtitle" id="temp"></p>
+                <p class = "subtitle" id="wind"></p>
+                <p class = "subtitle" id="humidity"></p>
+                <p class = "subtitle" id="uv-index"></p>
+            </div>
+
+            <!--5 day forecast-->
+            <div class = "box">
+                <h1 class = "title is-3">5 Day Forecast:</h1>
+                <div class = "tile" id = "day1"></div>
+                <div class = "tile" id = "day2"></div>
+                <div class = "tile" id = "day3"></div>
+                <div class = "tile" id = "day4"></div>
+                <div class = "tile" id = "day5"></div>
+            </div>
         </div>
     </section>
 
@@ -18,7 +52,7 @@
 
 
 
-
+<script src="./Assets/js/script.js"></script>
 
 
 
