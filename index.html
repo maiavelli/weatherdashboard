@@ -20,8 +20,8 @@
             <div class = "box field">
                 <label class = "label title is-3">Search for a City:</label>
                 <div class = "control">
-                <input class = "input mt-2" type = "text" placeholder = "San Diego">
-                <button class = "button is-primary is-rounded mt-2" type = "submit" value = "submit input">Submit</button>
+                <input class = "input mt-2" id= "inputVal" type = "text" placeholder = "San Diego">
+                <button class = "button is-primary is-rounded mt-2" id = "submitBtn" type = "submit" value = "submit input">Submit</button>
                 </div>
             </div>
         </div>
@@ -30,10 +30,10 @@
         <div class = "column is-9" id = "current-weather">
             <div class = "box has-text-centered">
                 <h1 class = "title is-3" id="city-name">City Name Here</h1>
-                <p class = "subtitle" id="temp"></p>
-                <p class = "subtitle" id="wind"></p>
-                <p class = "subtitle" id="humidity"></p>
-                <p class = "subtitle" id="uv-index"></p>
+                <p id="temp"></p>
+                <p id="wind"></p>
+                <p id="humidity"></p>
+                <p id="uv-index"></p>
             </div>
 
             <!--5 day forecast-->
