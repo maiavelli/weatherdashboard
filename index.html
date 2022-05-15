@@ -17,12 +17,17 @@
     <!--location input form-->
     <section class = "columns">
         <div class = "column is-3">
-            <div class = "box field">
+            <div class = "box field" id = "searchBar">
                 <label class = "label title is-3">Search for a City:</label>
                 <div class = "control">
                 <input class = "input mt-2" id= "inputVal" type = "text" placeholder = "San Diego">
                 <button class = "button is-primary is-rounded mt-2" id = "submitBtn" type = "submit" value = "submit input">Submit</button>
                 </div>
+            </div>
+
+            <div class = "box" id="recentSearches">
+                <button class = "button is-link is-rounded mt-2 is-hidden" id = "recentOne" type = "submit" value = "submit input"></button>
+
             </div>
         </div>
 

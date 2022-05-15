@@ -2,6 +2,8 @@
 //form variables
 var submitBtn = document.getElementById('submitBtn');
 var inputValue = document.getElementById('inputVal');
+var searchBar = document.getElementById('searchBar');
+var recentOne = document.getElementById('recentOne');
 
 //current weather section variables
 var nameEl = document.getElementById('city-name');
@@ -15,8 +17,6 @@ var today = document.getElementById('todays-date');
 //display current date
 const date = new Date().toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"});
 console.log(date);
-
-
 today.textContent = date;
 
 //5 day forecast section variables
@@ -83,6 +83,19 @@ var dayFiveIcon = document.getElementById('dayFiveIcon');
 //fetch current and 5 day weather info on submit
 submitBtn.addEventListener("click", getCurrentWeather);
 submitBtn.addEventListener("click", getFiveDay);
+
+submitBtn.addEventListener("click", saveLocal);
+
+function saveLocal() {
+    var input = inputValue.value;
+    localStorage.setItem("city", input);
+}
+
+window.onload = function reload() {
+    recentOne.textContent = localStorage.getItem("city");
+    recentOne.classList.remove('is-hidden');
+}
+
 
 function getCurrentWeather() {
 
