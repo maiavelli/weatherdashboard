@@ -27,10 +27,10 @@
         </div>
 
         <!--current weather-->
-        <div class = "column is-9" id = "current-weather">
+        <div class = "column is-9">
             <div class = "box content is-medium has-text-centered">
-                <h1 class = "title is-3" id="city-name">City Name Here</h1>
-                <h1 class = "title is-2" id="todays-date"></h1>
+                <h1 class = "title is-3" id="city-name"></h1>
+                <h1 class = "title is-4" id="todays-date"></h1>
                 <p id="temp"></p>
                 <p id="wind"></p>
                 <p id="humidity"></p>
@@ -38,47 +38,60 @@
             </div>
 
             <!--5 day forecast-->
-            <div class = "box">
-                <h1 class = "title is-3 has-text-centered">5 Day Forecast</h1>
+            <div class = "columns">
+                <div class = "column box">
+                    <h1 class = "title is-3 has-text-centered">5 Day Forecast</h1>
+                        <div class = "columns">
+                            <div class = "column" id = "day1">
+                                <h1 class = "title is-5" id="dayOneDate"></h1>
+                                <figure class = "image">
+                                    <image id="dayOneIcon">
+                                </figure> 
+                                <p id="dayOneTemp"></p>
+                                <p id="dayOneWind"></p>
+                                <p id="dayOneHumidity"></p>
+                            </div>
 
-                <div class = "card" id = "day1">
-                    <div class = "card-content">
-                        <p id="dayOneTemp"></p>
-                        <p id="dayOneWind"></p>
-                        <p id="dayOneHumidity"></p>
-                    </div>
-                </div>
-
-                <div class = "card" id = "day2">
-                    <div class = "card-content">
-                        <p id="day2Temp"></p>
-                        <p id="day2Wind"></p>
-                        <p id="day2Humidity"></p>
-                    </div>
-                </div>
+                            <div class = "column" id = "day2">
+                                <h1 class = "title is-5" id="dayTwoDate"></h1>
+                                <figure class = "image">
+                                    <image id="dayTwoIcon">
+                                </figure> 
+                                <p id="day2Temp"></p>
+                                <p id="day2Wind"></p>
+                                <p id="day2Humidity"></p>
+                            </div>
 
 
-                <div class = "card" id = "day3">
-                    <div class = "card-content">
-                        <p id="day3Temp"></p>
-                        <p id="day3Wind"></p>
-                        <p id="day3Humidity"></p>
-                    </div>
-                </div>
+                            <div class = "column" id = "day3">
+                                <h1 class = "title is-5" id="dayThreeDate"></h1>
+                                <figure class = "image">
+                                    <image id="dayThreeIcon">
+                                </figure>                        
+                                <p id="day3Temp"></p>
+                                <p id="day3Wind"></p>
+                                <p id="day3Humidity"></p>                       
+                            </div>
 
-                <div class = "card" id = "day4">
-                    <div class = "card-content">
-                        <p id="day4Temp"></p>
-                        <p id="day4Wind"></p>
-                        <p id="day4Humidity"></p>
-                    </div>
-                </div>
+                            <div class = "column" id = "day4"> 
+                                <h1 class = "title is-5" id="dayFourDate"></h1>
+                                <figure class = "image">
+                                    <image id="dayFourIcon">
+                                </figure>                          
+                                <p id="day4Temp"></p>
+                                <p id="day4Wind"></p>
+                                <p id="day4Humidity"></p>                       
+                            </div>
 
-                <div class = "card" id = "day5">
-                    <div class = "card-content">
-                        <p id="day5Temp"></p>
-                        <p id="day5Wind"></p>
-                        <p id="day5Humidity"></p>
+                            <div class = "column" id = "day5"> 
+                                <h1 class = "title is-5" id="dayFiveDate"></h1>
+                                <figure class = "image">
+                                    <image id="dayFiveIcon">
+                                </figure>                          
+                                <p id="day5Temp"></p>
+                                <p id="day5Wind"></p>
+                                <p id="day5Humidity"></p>
+                            </div>
                     </div>
                 </div>
             </div>
